@@ -13,9 +13,9 @@ const burger = {
       cb(res);
     });
   },
-  updateOne: function(colToUpdate, newVal, conditionCol, conditionVal) {
+  updateOne: function(colToUpdate, newVal, conditionCol, conditionVal, cb) {
     orm.updateOne(
-      'cats',
+      'burgers',
       colToUpdate,
       newVal,
       conditionCol,
@@ -26,7 +26,7 @@ const burger = {
     );
   },
   deleteOne: function(colName, colVal, cb) {
-    orm.deleteOne('cats', colName, colVal, function(res) {
+    orm.deleteOne('burgers', colName, colVal, function(res) {
       cb(res);
     });
   }

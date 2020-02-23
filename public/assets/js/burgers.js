@@ -15,26 +15,7 @@ $(function() {
     });
   });
 
-  $('.change-sleep').on('click', function(event) {
-    event.preventDefault();
-    const id = $(this).data('id');
-    const newSleep = $(this).data('newsleep');
-
-    const newSleepState = {
-      sleepy: newSleep
-    };
-
-    // Send the PUT request.
-    $.ajax('/api/cats/' + id, {
-      type: 'PUT',
-      data: newSleepState
-    }).then(function() {
-      console.log('changed sleep to', newSleep);
-      // Reload the page to get the updated list
-      location.reload();
-    });
-  });
-
+  /*
   $('.delete-cat').on('click', function(event) {
     event.preventDefault();
     const id = $(this).data('id');
@@ -68,5 +49,5 @@ $(function() {
       // Reload the page to get the updated list
       location.reload();
     });
-  });
+  });*/
 });
