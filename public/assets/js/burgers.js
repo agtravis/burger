@@ -15,6 +15,18 @@ $(function() {
     });
   });
 
+  $('.repeat-burger').on('click', function() {
+    const newBurger = {
+      name: $(this).data('name')
+    };
+    $.ajax('/api/burgers/', {
+      type: 'POST',
+      data: newBurger
+    }).then(function() {
+      location.reload();
+    });
+  });
+
   $('.create-form').on('submit', function(event) {
     event.preventDefault();
     const newBurger = {
