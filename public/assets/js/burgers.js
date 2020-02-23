@@ -38,4 +38,12 @@ $(function() {
       location.reload();
     });
   });
+
+  $('.bus-button').on('click', function() {
+    $.ajax(`/api/burgers/`, {
+      type: 'DELETE'
+    }).then(function() {
+      location.reload();
+    });
+  });
 });
