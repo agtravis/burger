@@ -7,6 +7,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   burger.selectAll(function(data) {
+    console.log(data);
     const allBurgersObj = {
       burgers: data
     };
