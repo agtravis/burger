@@ -26,20 +26,16 @@ $(function() {
       type: 'POST',
       data: newBurger
     }).then(function() {
-      console.log('Created new burger!');
       location.reload();
     });
   });
 
-  /*
-  $('.delete-cat').on('click', function(event) {
-    event.preventDefault();
+  $('.delete-burger').on('click', function() {
     const id = $(this).data('id');
-    $.ajax('/api/cats/' + id, {
+    $.ajax(`/api/burgers/` + id, {
       type: 'DELETE'
     }).then(function() {
-      console.log('Cat deleted');
       location.reload();
     });
-  });*/
+  });
 });
