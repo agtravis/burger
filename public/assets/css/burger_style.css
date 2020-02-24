@@ -1,0 +1,94 @@
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #022552;
+    background-color: #cee3ff;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+    background-color: #5e9ef3;
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #022552;
+}
+
+header h1 {
+    font-size: 3.75em;
+    color: #022552;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#burger-pic {
+    display: flex;
+    justify-content: center;
+}
+
+#burger-img {
+    width: 200px;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+#main-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 3px solid #022552;
+    padding: 25px;
+}
+
+#contact-links-container-footer {
+    display: flex;
+    justify-content: center;
+}
+
+#contact-links-footer {
+    display: flex;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.seperator {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#contact-links-footer a {
+    text-decoration: none;
+    color: #022552;
+    border-radius: 5px;
+}
+
+#contact-links-footer a:hover {
+    background-color: #5e9ef3;
+    color: #fff;
+}
+
+ul {}
+
+footer {
+    background-color: #999999;
+    border-top: 3px solid #022552;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.7em;
+    color: #022552;
+    position: relative;
+    top: -15px;
+    margin: 0;
+}
