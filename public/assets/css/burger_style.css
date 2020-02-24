@@ -1,129 +1,135 @@
 body {
-    padding: 0;
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color: #022552;
-    background-color: #cee3ff;
-    font-family: Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #022552;
+  background-color: #cee3ff;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 header {
-    background-color: #5e9ef3;
-    position: relative;
-    padding-bottom: 20px;
-    border-bottom: 3px solid #022552;
+  background-color: #5e9ef3;
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #022552;
 }
 
 header h1 {
-    font-size: 3.75em;
-    color: #022552;
+  font-size: 3.75em;
+  color: #022552;
 }
 
 #title {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 #burger-pic {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #burger-img {
-    width: 200px;
+  width: 200px;
 }
 
 .emphasis {
-    font-weight: bolder;
-    font-size: 1.1rem;
-}
-
-.container {
-    width: 70%;
-    margin: auto;
+  font-weight: bolder;
+  font-size: 1.1rem;
 }
 
 #main-container {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border: 3px solid #022552;
-    padding: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 3px solid #022552;
+  padding: 25px;
 }
 
 #burger-statuses {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-#serving, #finished {
-    width: 45%;
+#serving,
+#finished {
+  width: 47.5%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .create-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 10px;
-    margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
-.form-group {
-    width: 100%;
+#serving,
+#finished {
+  background-color: #f1f7ff;
+  border-top: 2px solid #022552;
+  border-left: 2px solid #022552;
+  border-bottom: 2px solid #a1badb;
+  border-right: 2px solid #a1badb;
 }
 
-#burg, #serving, #finished {
-    padding: 10px;
-    background-color: #f1f7ff;
-    border-top: 2px solid #022552;
-    border-left: 2px solid #022552;
-    border-bottom: 2px solid #a1badb;
-    border-right: 2px solid #a1badb
+#submit-burger-button {
+  width: 100%;
+}
+
+#burg {
+  width: 96.5%;
+  background-color: #f1f7ff;
+  border-top: 2px solid #022552;
+  border-left: 2px solid #022552;
+  border-bottom: 2px solid #a1badb;
+  border-right: 2px solid #a1badb;
+  padding-left: 3%;
 }
 
 #contact-links-container-footer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #contact-links-footer {
-    display: flex;
-    list-style-type: none;
-    padding-inline-start: 0;
+  display: flex;
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
 .seperator {
-    margin-left: 15px;
-    margin-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 #contact-links-footer a {
-    text-decoration: none;
-    color: #022552;
-    border-radius: 5px;
+  text-decoration: none;
+  color: #022552;
+  border-radius: 5px;
 }
 
 #contact-links-footer a:hover {
-    background-color: #5e9ef3;
-    color: #fff;
+  background-color: #5e9ef3;
+  color: #fff;
 }
 
-ul {}
-
 footer {
-    background-color: #999999;
-    border-top: 3px solid #022552;
-    width: 100%;
-    text-align: center;
-    margin-top: auto;
+  background-color: #999999;
+  border-top: 3px solid #022552;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
 }
 
 footer p {
-    font-size: 0.7em;
-    color: #022552;
-    position: relative;
-    top: -15px;
-    margin: 0;
+  font-size: 0.7em;
+  color: #022552;
+  position: relative;
+  top: -15px;
+  margin: 0;
 }
