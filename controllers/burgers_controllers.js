@@ -2,14 +2,26 @@
 
 const express = require('express');
 const burger = require('../models/burger.js');
+const axios = require('axios');
 
 const router = express.Router();
 
+const giphyURL = `http://api.giphy.com/v1/gifs/search?api_key=krsGO7xfBLF7bCmtRs7tpOLC0UjdzxcH&q=`;
+
 router.get('/', (req, res) => {
-  burger.selectAll(function(data) {
+  burger.selectAll(async function(data) {
     const allBurgersObj = {
       burgers: data
     };
+    const skipWordsArr = ['double', 'triple', 'extra', 'large', 'big', 'the'];
+    for (const burger of allBurgersObj.burgers) {
+      const asArr = burger.burger_name.split(' ');
+      let firstWord = asArr[0];
+      if (skipWordsArr.includes(firstWord.toLowerCase())) {
+        firstWord = asArr[1];
+      }
+      burger.firstWord = firstWord.toLowerCase();
+    }
     res.render('index', allBurgersObj);
   });
 });

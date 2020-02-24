@@ -1,5 +1,6 @@
-<li class="burger-li">
+<li class="burger-li" data-word="{{firstWord}}">
     {{burger_name}}<br>
+    <div class="pic-div" id="picture-div-{{id}}"></div>
     <button class="devour-burger" data-id="{{id}}" data-devoured="{{devoured}}">
         {{#unless devoured}} Eat it! {{else}} Remake it! {{/unless}}
     </button>

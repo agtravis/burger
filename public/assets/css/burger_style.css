@@ -94,6 +94,18 @@ header h1 {
 
 .burger-li {
   margin-bottom: 20px;
+  border: 1px dashed #022552;
+  padding: 5px;
+}
+
+.burger-li .pic-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.burger-li img {
+  width: 100px;
 }
 
 #bus-div {
