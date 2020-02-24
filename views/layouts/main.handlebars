@@ -25,19 +25,26 @@
             </div>
     </header>
     <div class="container" id="main-container">
-        {{{ body }}}
+        <h3>Instructions:</h3>
+        <p>To place an order, enter anything you want in the <span class="emphasis">"Order"</span> box below. Your order
+            will appear in the <span class="emphasis">"Now Serving"</span> box. You can either <span
+                class="emphasis">eat it</span>, or <span class="emphasis">send it back</span>.</p>
+        <p>Once you have eaten it, it will appear in the <span class="emphasis">"Finished"</span> box, and from there
+            you can either <span class="emphasis">remake it</span> if you didn't like it, or <span
+                class="emphasis">order another</span>!</p>
+        <p>As a courtesy, please <span class="emphasis">bus your table</span> when you are finished! Thanks for stopping
+            by!</p>
 
         <h3>Order:</h3>
         <form class="create-form">
 
-            <div class="form-group">
-                <label for="burg">Burger Name:</label>
-                <input type="text" id="burg" name="name">
-            </div>
+            <input type="text" id="burg" name="name">
 
 
-            <button type="submit">Add Burger</button>
+
+            <button id="submit-burger-button" type="submit">Add Burger</button>
         </form>
+        {{{ body }}}
 
     </div>
 

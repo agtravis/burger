@@ -1,20 +1,27 @@
-<h3>Now Serving:</h3>
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/unless}}
-    {{/each}}
-</ul>
+<div id="burger-statuses">
 
+    <div id="serving">
+        <h3>Now Serving:</h3>
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            {{> burgers/burger-block devoured=false}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
 
-<h3>Finished:</h3>
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/if}}
-    {{/each}}
-</ul>
+    <div id="finished">
+        <h3>Finished:</h3>
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            {{> burgers/burger-block devoured=true}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+
+</div>
 
 <button class="bus-button">Bus Table</button>

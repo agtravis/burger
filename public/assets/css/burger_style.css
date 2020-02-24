@@ -36,6 +36,11 @@ header h1 {
     width: 200px;
 }
 
+.emphasis {
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
 .container {
     width: 70%;
     margin: auto;
@@ -46,6 +51,36 @@ header h1 {
     margin-bottom: 50px;
     border: 3px solid #022552;
     padding: 25px;
+}
+
+#burger-statuses {
+    display: flex;
+    justify-content: space-between;
+}
+
+#serving, #finished {
+    width: 45%;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+#burg, #serving, #finished {
+    padding: 10px;
+    background-color: #f1f7ff;
+    border-top: 2px solid #022552;
+    border-left: 2px solid #022552;
+    border-bottom: 2px solid #a1badb;
+    border-right: 2px solid #a1badb
 }
 
 #contact-links-container-footer {
