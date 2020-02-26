@@ -74,9 +74,10 @@
     const burgers = document.getElementsByClassName('burger-li');
     //console.log(burgers);
     for (const burger of burgers) {
+        const id = burger.children[1].id;
         const random = Math.floor(Math.random() * 20);
         const word = burger.dataset.word;
-        const div = burger.childNodes[3];
+        const div = document.getElementById(id);//burger.childNodes[3];
         $.ajax(giphyURL + word, {
             type: 'GET'
         }).then(function (response) {
