@@ -67,6 +67,8 @@ If we look in the `burger_controllers.js`, we can see our routes. The when the h
         });
     });
 
+The description word (here as the property 'firstWord') will be appended to an API query, and therefore be able to dynamically generate a response based on the burger. While Giphy won't always make sense for the purposes of a burger filling, I can somewhat control this by telling my code that if the first word is equal to something that is not a food (for example, many burger names start with _'Double'_), it will skip over to the next word. This is just demonstrative, and if I really wanted to implement this completely, the array could be a lot larger, there could be a recursive helper function, or - perhaps more realistically - the user would not be able to choose anything from their imagination, but be constricted by a _menu_!
+
 With the object completed, it is now passed to the response using the `.render()` method. This is because we are using `Handlebars` to dynamically insert our burgers.
 
 Now we can come into our `Handlebars` files which have been partitioned to make the HTML more flexible. This page doesn't really do too much, so It could all be done easily without partions, however I have opted to include this feature for demonstration purposes. Each 'status' div looks as follows:
@@ -115,23 +117,27 @@ This general path can be followed for all the `CRUD` actions.
 
 ## Setup
 
-The user, after forking the repo, will need to run `npm i` in their console, but once that is undertaken, they will be able to run the app. They will need to access the `seed.sql` file and run the first half of this code if they wish to use my dummy data, for testing purposes.
+This app runs in the browser. Here are the instructions from the homepage:
+
+_To place an order, enter anything you want in the Order box below. Your order will appear in the Now Serving box. You can either eat it, or send it back._
+
+_Once you have eaten it, it will appear in the Finished box, and from there you can either remake it if you didn't like it, or order another!_
+
+_As a courtesy, please bus your table when you are finished! Thanks for stopping by!_
 
 ## Features
 
-This app tries to streamline the user experience. As I have mentioned previously, I have removed as much of the guess-work on the user's part as possible, and tried to make a plain-English, function application.
+This app tries to reflect the very real possible usage of an ordering system in a restaurant. In that case, the order would be taken and input by a cashier, and the order would be placed in a 'preparation' phase. Next, when complete, it would move into a 'distribution' phase, where it would be delivered to the customer, and this can be continued or broken down into smaller steps. A very real example of this would be the Dominos Pizza Order Tracker feature:
 
-## Status
+![Dominos](./public/assets/img/dominos.jpg).
 
-This app could be implemented into a company as is with a very rigid structure without too much more work done. It is not a complete database by any stretch, but as far as knowing who is an employee, and how much they get paid and to who they are responsible.
+It is worth mentioning that in my opinion this tracker is probably run using a combination of timers and event triggers to transition between stages, but in essence it is the same thing.
 
-### Future Developement
+## Status & Future Developement
 
-In terms of the app and its usefulness, more data capacity and more tables could be added. For example, there should be a table with employee contact information, employee history with dates, or perhaps a list of projects that employees are working on. It could also be more flexible, having independent salaries, and multiple roles per employee.
+This app is currently slightly above MVP as far as achieving my personal objective. Adding the interaction with Giphy was fun, but I could probably streamline that, and also make more effort with the styling, however the app _is_ responsive, and could be considered **mobile-first** even though it wasn't planned that way.
 
-As far as the code goes, I would like to split up my `functions.js` file, splitting them up into modules based on category of the functions (this file is 600 lines of code).
-
-There are also a few functions that do not end in a way the user would expect (when the function is complete, the next menu presented two the user is back up two levels instead of one) or provide a 'Go back' option (I initally only thought of using 'Go back' when entering a menu that would result in permanently altered records, but it would be useful to have as an option even when only viewing (`SELECT` only)). I would like to go back and correct this.
+As mentioned before, this would not take much to be implemented in a real restaurant setting - outside of implementing a real customer/financial system of course.
 
 ## Contact
 
