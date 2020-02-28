@@ -2,11 +2,8 @@
 
 const express = require('express');
 const burger = require('../models/burger.js');
-const axios = require('axios');
 
 const router = express.Router();
-
-const giphyURL = `http://api.giphy.com/v1/gifs/search?api_key=krsGO7xfBLF7bCmtRs7tpOLC0UjdzxcH&q=`;
 
 router.get('/', (req, res) => {
   burger.selectAll(async function(data) {
